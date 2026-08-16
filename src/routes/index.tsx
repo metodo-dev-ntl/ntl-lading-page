@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import capaImage from "@/assets/images/capa.png";
-import devKit from "@/assets/dev-kit.png.asset.json";
-import autora from "@/assets/autora.jpg.asset.json";
+import devKitImage from "@/assets/images/capa-hotmart.png";
+import autoraImage from "@/assets/images/autora.png";
 
 // Configure aqui a URL do checkout do produto.
 const CHECKOUT_URL = "#checkout";
@@ -327,7 +327,7 @@ function Index() {
           <Cta className="mt-8 w-full sm:w-auto">Quero a cartilha — R$ 47</Cta>
         </div>
         <img
-          src={devKit.url}
+          src={devKitImage}
           alt="Materiais do DEV Kit: briefing, proposta comercial e contrato de serviço"
           loading="lazy"
           width={1280}
@@ -421,7 +421,7 @@ function Index() {
             desenvolvedor. O DEV Kit é um conjunto de materiais, modelos e recursos.
           </p>
           <img
-            src={devKit.url}
+            src={devKitImage}
             alt="DEV Kit: briefing online, proposta comercial, contrato de serviço, Google Sheets, Apps Script e Sites"
             loading="lazy"
             width={1280}
@@ -493,7 +493,7 @@ function Index() {
         <SectionLabel>A autora</SectionLabel>
         <div className="grid gap-8 sm:grid-cols-[14rem_1fr] sm:items-center">
           <img
-            src={autora.url}
+            src={autoraImage}
             alt="Foto da autora da cartilha DEV — Não Trabalhe no Limite"
             loading="lazy"
             className="mx-auto h-48 w-48 rounded-full border-4 border-ink object-cover shadow-[10px_10px_0_var(--highlight)] sm:h-56 sm:w-56"
