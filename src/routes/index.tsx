@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import capaImage from "@/assets/images/capa.png";
 import devKitHotmartImage from "@/assets/images/capa-hotmart.png";
-import autoraImage from "@/assets/images/autora.png";
+import autoraImage from "@/assets/images/autor.png";
 
 // Configure aqui a URL do checkout do produto.
 const CHECKOUT_URL = "#checkout";
@@ -601,65 +601,24 @@ function Index() {
         </div>
       </section>
 
-      {/* DEV KIT */}
-      <section className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-2 md:items-center md:py-24">
-        <div>
-          <SectionLabel>Ferramentas</SectionLabel>
-          <h2 className="text-3xl leading-tight sm:text-4xl">
-            DEV Kit
-          </h2>
-          <p className="mt-4 text-sm text-muted-foreground sm:text-base">
-            Ferramentas para organizar seu atendimento profissional.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-2">
-            {["Briefing", "Proposta", "Contrato", "Escopo", "Comunicação", "Validação", "Suporte"].map((tool) => (
-              <span
-                key={tool}
-                className="label-cond border border-ink px-3 py-1 text-xs sm:text-sm"
-              >
-                {tool}
-              </span>
-            ))}
-          </div>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Cta className="w-full sm:w-auto">Quero a cartilha + DEV Kit</Cta>
-            <a
-              href={CHECKOUT_URL}
-              className="label-cond inline-flex w-full items-center justify-center border-2 border-ink px-8 py-4 text-center text-base text-ink transition-all duration-200 hover:bg-ink hover:text-paper sm:w-auto"
-            >
-              Quero somente o DEV Kit
-            </a>
-          </div>
-        </div>
-        <img
-          src={devKitHotmartImage}
-          alt="DEV Kit: Ferramentas para organizar seu atendimento profissional"
-          loading="lazy"
-          width={1280}
-          height={1280}
-          className="mx-auto w-full max-w-lg border-4 border-ink transition-all duration-200 hover:shadow-[12px_12px_0_var(--highlight)] fade-in"
-        />
-      </section>
-
       {/* OFERTA */}
       <section id="checkout" className="border-y-4 border-ink bg-ink py-16 text-paper md:py-24">
         <div className="mx-auto grid max-w-5xl gap-12 px-5 md:grid-cols-[0.9fr_1.1fr] md:items-center">
           <img
             src={capaImage}
-            alt="Cartilha DEV — Não Trabalhe no Limite com bônus DEV Kit"
+            alt="Cartilha DEV — Não Trabalhe no Limite"
             className="mx-auto w-full max-w-sm border-4 border-highlight"
           />
           <div>
             <p className="label-cond text-xs text-highlight">Oferta</p>
             <h2 className="mt-3 text-3xl leading-tight sm:text-5xl">
-              Leve a cartilha + o DEV Kit
+              Leve a cartilha
             </h2>
             <ul className="mt-8 space-y-3 text-sm sm:text-base">
               {[
                 "Cartilha DEV — Não Trabalhe no Limite",
-                "DEV Kit",
                 "Materiais práticos",
-                "Estruturas para clientes e projetos",
+                "30 tópicos em 5 partes",
               ].map((t) => (
                 <li key={t} className="flex gap-3 border-b border-paper/20 pb-3">
                   <span className="text-highlight">✓</span>
@@ -670,7 +629,7 @@ function Index() {
             <p className="mt-8 font-display text-6xl leading-none text-highlight sm:text-7xl">
               R$ 47,00
             </p>
-            <Cta className="mt-6 w-full sm:w-auto">Quero meu kit agora</Cta>
+            <Cta className="mt-6 w-full sm:w-auto">Quero a cartilha</Cta>
             <p className="label-cond mt-4 text-xs opacity-70">
               Acesso digital • Compra segura • Material prático
             </p>
@@ -706,7 +665,7 @@ function Index() {
           </div>
           <p className="mt-10 font-display text-6xl leading-none sm:text-7xl">R$ 47,00</p>
           <Cta className="mt-8 w-full bg-ink text-paper ring-ink sm:w-auto">
-            Quero DEV — Não Trabalhe no Limite
+            Quero a cartilha agora
           </Cta>
         </div>
       </section>
