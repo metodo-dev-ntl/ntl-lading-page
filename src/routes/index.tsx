@@ -1,13 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import capaImage from "@/assets/images/capa.png";
 import devKitHotmartImage from "@/assets/images/capa-hotmart.png";
-import devKitPtImage from "@/assets/images/dev-kit-pt.png";
 import autoraImage from "@/assets/images/autora.png";
 
 // Configure aqui a URL do checkout do produto.
 const CHECKOUT_URL = "#checkout";
-// Configure aqui a URL do checkout apenas do DEV Kit.
-const KIT_ONLY_URL = "#checkout";
 // Configure aqui a URL do manual "Como contratar o DEV".
 const MANUAL_URL = "#checkout";
 
@@ -146,17 +143,6 @@ const circuit = [
   "Decisão",
   "Outra alteração",
   "Mente sem encerrar o ciclo",
-];
-
-const kit = [
-  ["📋", "Briefing"],
-  ["💼", "Proposta Comercial"],
-  ["📑", "Contrato de Serviço"],
-  ["📊", "Google Sheets"],
-  ["⚙️", "Google Apps Script"],
-  ["🌐", "Google Sites"],
-  ["🔗", "Links organizados"],
-  ["💬", "WhatsApp"],
 ];
 
 const materials = [
@@ -404,65 +390,6 @@ function Index() {
           </p>
         </div>
       </section>
-
-      {/* BÔNUS */}
-      <section className="bg-ink py-16 text-paper md:py-24">
-        <div className="mx-auto max-w-6xl px-5">
-          <span className="label-cond inline-block bg-highlight px-3 py-1 text-xs text-ink">
-            Bônus exclusivo
-          </span>
-          <h2 className="mt-6 text-[clamp(3rem,12vw,7rem)] leading-none text-highlight">
-            DEV KIT
-          </h2>
-          <p className="label-cond mt-2 text-base sm:text-xl">
-            As ferramentas para colocar a metodologia em prática.
-          </p>
-          <p className="mt-6 max-w-2xl text-sm opacity-80 sm:text-base">
-            Além da cartilha, você recebe um kit de materiais pensado para o dia a dia do
-            desenvolvedor. O DEV Kit é um conjunto de materiais, modelos e recursos.
-          </p>
-          <img
-            src={devKitPtImage}
-            alt="DEV Kit: briefing online, proposta comercial, contrato de serviço, Google Sheets, Apps Script e Sites"
-            loading="lazy"
-            width={1280}
-            height={1280}
-            className="mx-auto mt-10 w-full max-w-2xl"
-          />
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {kit.map(([icon, name]) => (
-              <div key={name} className="border border-highlight/60 p-5">
-                <span className="text-2xl">{icon}</span>
-                <p className="label-cond mt-2 text-xs leading-tight sm:text-sm">{name}</p>
-              </div>
-            ))}
-          </div>
-          <ul className="mt-10 grid gap-2 text-sm sm:grid-cols-2 sm:text-base">
-            {[
-              "Organize seus clientes.",
-              "Apresente melhor seu trabalho.",
-              "Registre o que foi combinado.",
-              "Separe suporte de novas demandas.",
-              "Tenha mais clareza antes de começar a desenvolver.",
-            ].map((t) => (
-              <li key={t} className="flex gap-3">
-                <span className="text-highlight">✓</span>
-                {t}
-              </li>
-            ))}
-          </ul>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <Cta className="w-full sm:w-auto">Quero meu kit agora</Cta>
-            <a
-              href={KIT_ONLY_URL}
-              className="label-cond inline-flex w-full items-center justify-center border-2 border-highlight px-8 py-4 text-center text-sm text-highlight transition-colors hover:bg-highlight hover:text-ink sm:w-auto sm:text-base"
-            >
-              Quero somente o DEV Kit
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* POSICIONAMENTO */}
       <section className="border-y-4 border-ink bg-paper py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-5">
@@ -500,7 +427,7 @@ function Index() {
             className="mx-auto h-48 w-48 rounded-full border-4 border-ink object-cover shadow-[10px_10px_0_var(--highlight)] sm:h-56 sm:w-56"
           />
           <div>
-            <h2 className="text-3xl leading-tight sm:text-4xl">[Nome da autora]</h2>
+            <h2 className="text-3xl leading-tight sm:text-4xl">Lidyh Pinheiro</h2>
             <p className="label-cond mt-2 text-xs text-muted-foreground sm:text-sm">
               Desenvolvedora • CTO • Fundadora de startups
             </p>
