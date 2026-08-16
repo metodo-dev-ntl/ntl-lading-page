@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import capaImage from "@/assets/images/capa.png";
-import devKitImage from "@/assets/images/capa-hotmart.png";
+import devKitImage from "@/assets/images/dev-kit-pt.png";
 import autoraImage from "@/assets/images/autora.png";
 
 // Configure aqui a URL do checkout do produto.
@@ -223,7 +223,7 @@ function Index() {
             <img
               src={capaImage}
               alt="Capa da cartilha DEV — Não Trabalhe no Limite"
-              className="mx-auto w-full max-w-md border-4 border-ink shadow-[16px_16px_0_var(--ink)]"
+              className="mx-auto w-full max-w-2xl border-4 border-ink shadow-[16px_16px_0_var(--ink)]"
             />
             <div className="absolute -top-4 -right-1 flex h-28 w-28 rotate-6 items-center justify-center rounded-full bg-highlight ring-2 ring-ink sm:h-36 sm:w-36">
               <p className="label-cond text-center text-[0.6rem] leading-tight sm:text-xs">
@@ -629,7 +629,7 @@ function Index() {
           <img
             src={capaImage}
             alt="Cartilha DEV — Não Trabalhe no Limite com bônus DEV Kit"
-            className="mx-auto w-full max-w-xs border-4 border-highlight"
+            className="mx-auto w-full max-w-sm border-4 border-highlight"
           />
           <div>
             <p className="label-cond text-xs text-highlight">Oferta</p>
