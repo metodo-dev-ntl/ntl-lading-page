@@ -423,6 +423,14 @@ function Index() {
             Além da cartilha, você recebe um kit de materiais pensado para o dia a dia do
             desenvolvedor. O DEV Kit é um conjunto de materiais, modelos e recursos.
           </p>
+          <img
+            src={devKit.url}
+            alt="DEV Kit: briefing online, proposta comercial, contrato de serviço, Google Sheets, Apps Script e Sites"
+            loading="lazy"
+            width={1280}
+            height={1280}
+            className="mt-10 w-full border-4 border-highlight bg-paper"
+          />
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
             {kit.map(([icon, name]) => (
               <div key={name} className="border border-highlight/60 p-5">
@@ -445,7 +453,67 @@ function Index() {
               </li>
             ))}
           </ul>
-          <Cta className="mt-10 w-full sm:w-auto">Quero meu kit agora</Cta>
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <Cta className="w-full sm:w-auto">Quero meu kit agora</Cta>
+            <a
+              href={KIT_ONLY_URL}
+              className="label-cond inline-flex w-full items-center justify-center border-2 border-highlight px-8 py-4 text-center text-sm text-highlight transition-colors hover:bg-highlight hover:text-ink sm:w-auto sm:text-base"
+            >
+              Quero somente o DEV Kit
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* POSICIONAMENTO */}
+      <section className="border-y-4 border-ink bg-paper py-16 md:py-24">
+        <div className="mx-auto max-w-4xl px-5">
+          <div className="border-4 border-ink bg-card p-8 shadow-[12px_12px_0_var(--highlight)]">
+            <p className="label-cond text-xs text-muted-foreground">Posicionamento</p>
+            <h2 className="mt-4 font-cond text-2xl font-bold uppercase leading-tight sm:text-4xl">
+              Esta não é uma cartilha contra clientes.
+            </h2>
+            <p className="mt-6 text-sm text-muted-foreground sm:text-base">
+              O objetivo é apoiar o desenvolvedor na postura profissional e na captação de
+              clientes: entender a demanda, apresentar propostas com clareza, formalizar o
+              combinado e conduzir o projeto com organização. Cliente bem atendido volta e
+              indica — e isso começa com processo, não com desgaste.
+            </p>
+            <div className="mt-8">
+              <a
+                href={MANUAL_URL}
+                className="label-cond inline-flex w-full items-center justify-center bg-ink px-8 py-4 text-center text-sm text-paper ring-2 ring-ink transition-transform hover:-translate-y-0.5 sm:w-auto sm:text-base"
+              >
+                Confira — Manual: Como contratar o DEV
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AUTORA */}
+      <section className="mx-auto max-w-5xl px-5 py-16 md:py-24">
+        <SectionLabel>A autora</SectionLabel>
+        <div className="grid gap-8 sm:grid-cols-[14rem_1fr] sm:items-center">
+          <img
+            src={autora.url}
+            alt="Foto da autora da cartilha DEV — Não Trabalhe no Limite"
+            loading="lazy"
+            className="mx-auto h-48 w-48 rounded-full border-4 border-ink object-cover shadow-[10px_10px_0_var(--highlight)] sm:h-56 sm:w-56"
+          />
+          <div>
+            <h2 className="text-3xl leading-tight sm:text-4xl">Marcela Antunes</h2>
+            <p className="label-cond mt-2 text-xs text-muted-foreground sm:text-sm">
+              Desenvolvedora • CTO • Fundadora de startups
+            </p>
+            <p className="mt-6 text-sm text-muted-foreground sm:text-base">
+              Desenvolvedora apaixonada por tecnologia, atua há anos entre projetos
+              próprios e atendimento a clientes. Já fundou e liderou tecnicamente
+              startups, viveu de perto a rotina de escopo aberto, prazos apertados e
+              decisões sob pressão — e reuniu nesta cartilha o que funciona para trabalhar
+              com mais clareza e construir uma carreira sustentável.
+            </p>
+          </div>
         </div>
       </section>
 
