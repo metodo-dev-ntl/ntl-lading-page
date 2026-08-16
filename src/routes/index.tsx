@@ -436,23 +436,32 @@ function Index() {
         </div>
       </section>
 
-      {/* AUTORA */}
+      {/* AUTOR */}
       <section className="mx-auto max-w-5xl px-5 py-16 md:py-24">
-        <SectionLabel>A autora</SectionLabel>
+        <SectionLabel>O autor</SectionLabel>
         <div className="grid gap-8 sm:grid-cols-[14rem_1fr] sm:items-center">
           <img
             src={autoraImage}
-            alt="Foto da autora da cartilha DEV — Não Trabalhe no Limite"
+            alt="Foto do autor da cartilha DEV — Não Trabalhe no Limite"
             loading="lazy"
             className="mx-auto h-48 w-48 rounded-full border-4 border-ink object-cover sm:h-56 sm:w-56"
           />
           <div>
-            <h2 className="text-3xl leading-tight sm:text-4xl">Lidyh Pinheiro</h2>
+            <h2 className="text-3xl leading-tight sm:text-4xl">Luidi Pinheiro</h2>
             <p className="label-cond mt-2 text-xs text-muted-foreground sm:text-sm">
-              Desenvolvedora • CTO • Fundadora de startups
+              Desenvolvedor • Programador autodidata • Freelancer
             </p>
             <p className="mt-6 text-sm text-muted-foreground sm:text-base">
-              Criei este material para apoiar desenvolvedores, principalmente quem está começando a atender clientes, a transformar conhecimento técnico em uma atuação mais profissional, organizada e sustentável.
+              Paraense, 34 anos, é programador autodidata e desenvolvedor freelancer. Atua profissionalmente com tecnologia desde os 17 anos, quando começou trabalhando como webdesigner e na criação de páginas para a web.
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground sm:text-base">
+              Durante sua trajetória, percebeu que dominar o desenvolvimento não era suficiente para sustentar uma carreira saudável. Ao acreditar que precisava apenas aprimorar suas habilidades técnicas e deixar a captação e a relação com clientes nas mãos de outras pessoas, acabou perdendo o controle sobre uma parte fundamental do próprio trabalho.
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground sm:text-base">
+              Essa experiência deu origem a uma convicção: a maturidade do mercado depende dos dois lados. Quem presta um serviço precisa aprender a apresentar, negociar, delimitar e conduzir seu trabalho. Quem contrata também precisa compreender melhor o que está contratando.
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground sm:text-base">
+              O objetivo desta cartilha não é ensinar o DEV a trabalhar contra o cliente. É ajudá-lo a construir relações profissionais mais claras, maduras e sustentáveis.
             </p>
           </div>
         </div>
