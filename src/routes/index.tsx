@@ -502,7 +502,7 @@ function Index() {
             className="mx-auto h-48 w-48 rounded-full border-4 border-ink object-cover shadow-[10px_10px_0_var(--highlight)] sm:h-56 sm:w-56"
           />
           <div>
-            <h2 className="text-3xl leading-tight sm:text-4xl">Marcela Antunes</h2>
+            <h2 className="text-3xl leading-tight sm:text-4xl">[Nome da autora]</h2>
             <p className="label-cond mt-2 text-xs text-muted-foreground sm:text-sm">
               Desenvolvedora • CTO • Fundadora de startups
             </p>
@@ -698,7 +698,7 @@ function Index() {
 
       <footer className="bg-ink py-8 text-center text-paper">
         <p className="label-cond px-5 text-xs sm:text-sm">
-          Trabalhe com inteligência. Proteja sua mente. Construa uma carreira sustentável.
+          Trabalhe com inteligência. Construa uma carreira sustentável.
         </p>
       </footer>
 
