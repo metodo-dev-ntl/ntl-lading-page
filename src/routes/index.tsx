@@ -332,7 +332,7 @@ function Index() {
           loading="lazy"
           width={1280}
           height={1280}
-          className="mx-auto w-full max-w-sm -rotate-2 border-4 border-ink shadow-[16px_16px_0_var(--highlight)]"
+          className="mx-auto w-full max-w-lg -rotate-2 border-4 border-ink shadow-[16px_16px_0_var(--highlight)]"
         />
       </section>
 
@@ -426,7 +426,7 @@ function Index() {
             loading="lazy"
             width={1280}
             height={1280}
-            className="mt-10 w-full border-4 border-highlight bg-paper"
+            className="mx-auto mt-10 w-full max-w-2xl border-4 border-highlight bg-paper"
           />
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
             {kit.map(([icon, name]) => (
