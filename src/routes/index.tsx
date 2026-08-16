@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import capaImage from "@/assets/images/capa.png";
-import devKitImage from "@/assets/images/dev-kit-pt.png";
+import devKitHotmartImage from "@/assets/images/capa-hotmart.png";
+import devKitPtImage from "@/assets/images/dev-kit-pt.png";
 import autoraImage from "@/assets/images/autora.png";
 
 // Configure aqui a URL do checkout do produto.
@@ -327,12 +328,12 @@ function Index() {
           <Cta className="mt-8 w-full sm:w-auto">Quero a cartilha — R$ 47</Cta>
         </div>
         <img
-          src={devKitImage}
+          src={devKitHotmartImage}
           alt="Materiais do DEV Kit: briefing, proposta comercial e contrato de serviço"
           loading="lazy"
           width={1280}
           height={1280}
-          className="mx-auto w-full max-w-lg"
+          className="mx-auto w-full max-w-lg border-4 border-ink shadow-[16px_16px_0_var(--highlight)]"
         />
       </section>
 
@@ -421,7 +422,7 @@ function Index() {
             desenvolvedor. O DEV Kit é um conjunto de materiais, modelos e recursos.
           </p>
           <img
-            src={devKitImage}
+            src={devKitPtImage}
             alt="DEV Kit: briefing online, proposta comercial, contrato de serviço, Google Sheets, Apps Script e Sites"
             loading="lazy"
             width={1280}
