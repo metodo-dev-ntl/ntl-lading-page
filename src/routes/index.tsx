@@ -627,7 +627,7 @@ function Index() {
       <section id="checkout" className="border-y-4 border-ink bg-ink py-16 text-paper md:py-24">
         <div className="mx-auto grid max-w-5xl gap-12 px-5 md:grid-cols-[0.9fr_1.1fr] md:items-center">
           <img
-            src={capa.url}
+            src={capaImage}
             alt="Cartilha DEV — Não Trabalhe no Limite com bônus DEV Kit"
             className="mx-auto w-full max-w-xs border-4 border-highlight"
           />
