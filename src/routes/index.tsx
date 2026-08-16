@@ -52,39 +52,82 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
-const topics = [
-  ["01", "Clientes e Mercado", "Como identificar maturidade do cliente e entender quando procurar oportunidades além do mercado local."],
-  ["02", "Antes de Aceitar", "Como avaliar se um serviço realmente compensa tempo, dinheiro, conhecimento e energia."],
-  ["03", "Escopo e Limites", "Como diferenciar o que foi combinado de uma nova demanda."],
-  ["04", "Prazos e Pressão", "Como lidar com urgências, cobranças e mudanças de prioridade."],
-  ["05", "IA e Profissionalismo", "Como usar IA sem abandonar critério técnico, segurança, testes e responsabilidade."],
-  ["06", "Valor do Dev", "Por que o valor profissional não está simplesmente em escrever código."],
-  ["07", "Carreira", "Freelancer, emprego, consultoria, produto, SaaS e mudança de direção."],
-  ["08", "Sobrecarga", "Como reconhecer sinais de que o trabalho está ocupando espaço demais."],
-];
-
-const parts = [
-  ["Parte 1", "Antes de aceitar o trabalho", "Maturidade do cliente • O serviço compensa? • O que está realmente combinado"],
-  ["Parte 2", "Quando o trabalho começa a pesar", "“É só uma alteração” • Urgências • Retrabalho • Mensagens fora de hora"],
-  ["Parte 3", "IA, profissão e valor", "IA sem perder critério • Testes e segurança • O que sustenta seu valor"],
-  ["Parte 4", "Seu rumo", "Freelance, emprego, consultoria, produto • Mudança de direção"],
-  ["Parte 5", "Não chegue ao limite", "Sinais de sobrecarga • Limites claros • Rotina sustentável"],
+const contentParts = [
+  {
+    part: "Parte 1",
+    title: "Antes de aceitar o trabalho",
+    topics: [
+      "Maturidade do cliente",
+      "Mercado além da sua cidade",
+      "O serviço realmente compensa?",
+      "Tempo, dinheiro, conhecimento e energia",
+      "O que está realmente combinado",
+      "Como apresentar sua proposta",
+    ],
+  },
+  {
+    part: "Parte 2",
+    title: "Quando o trabalho começa a pesar",
+    topics: [
+      "“É só uma alteração”",
+      "Urgências e prazos",
+      "Retrabalho",
+      "Mensagens fora de hora",
+      "Mudança de prioridade",
+      "Canal oficial de comunicação",
+    ],
+  },
+  {
+    part: "Parte 3",
+    title: "IA, profissão e valor",
+    topics: [
+      "IA sem perder critério técnico",
+      "Testes e segurança",
+      "Arquitetura e responsabilidade",
+      "O que sustenta o seu valor",
+      "Precificação do seu trabalho",
+      "Aprendizado contínuo sem ansiedade",
+    ],
+  },
+  {
+    part: "Parte 4",
+    title: "Seu rumo",
+    topics: [
+      "Freelance",
+      "Emprego",
+      "Consultoria",
+      "Produto e SaaS",
+      "Portfólio e captação de clientes",
+      "Mudança de direção",
+    ],
+  },
+  {
+    part: "Parte 5",
+    title: "Não chegue ao limite",
+    topics: [
+      "Sinais de sobrecarga",
+      "Limites claros",
+      "Rotina sustentável",
+      "Organização do dia",
+      "Descanso e foco",
+      "Carreira de longo prazo",
+    ],
+  },
 ];
 
 const complaints = [
-  "“É só uma alteração.”",
-  "“Preciso para amanhã.”",
-  "Cliente mudando tudo no meio do projeto.",
-  "Marketing cobrando prazo.",
-  "Comercial cobrando meta.",
-  "Retrabalho.",
-  "Escopo mal definido.",
-  "Mensagens fora do horário.",
-  "Cobranças constantes.",
-  "Projetos que não compensam.",
-  "Pressão para entregar mais rápido.",
-  "Tentar acompanhar todas as novas ferramentas.",
-  "Medo de a IA substituir seu trabalho.",
+  "Ainda não sabe como precificar um projeto.",
+  "Quer captar clientes e não sabe por onde começar.",
+  "Recebe pedidos soltos no WhatsApp, sem escopo.",
+  "Não tem um briefing para entender a demanda.",
+  "Nunca montou uma proposta comercial.",
+  "Trabalha sem contrato e sem registro do combinado.",
+  "Aceita alterações infinitas por insegurança.",
+  "Fica sem demanda em alguns meses do ano.",
+  "Tem dificuldade de organizar prazos e entregas.",
+  "Não sabe separar suporte de novo serviço.",
+  "Quer atender fora da sua cidade e não sabe como.",
+  "Quer usar IA mantendo critério técnico.",
 ];
 
 const circuit = [
@@ -126,7 +169,6 @@ const faq = [
   ["É um curso?", "Não. É uma cartilha digital acompanhada de materiais práticos."],
   ["O que é o DEV Kit?", "É um conjunto de modelos, estruturas e recursos para ajudar o desenvolvedor a organizar clientes, propostas, projetos e comunicação."],
   ["Preciso ser experiente?", "Não. Pode ser útil tanto para profissionais experientes quanto para quem está começando a atender clientes."],
-  ["A IA vai substituir o DEV?", "A cartilha aborda justamente essa questão e mostra a importância do conhecimento técnico, análise, testes, segurança, arquitetura e responsabilidade profissional."],
   ["É tratamento para burnout?", "Não. O material não substitui acompanhamento médico ou psicológico."],
 ];
 
@@ -137,7 +179,10 @@ function Index() {
       <section className="paper-grain border-b-4 border-ink">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-12 md:grid-cols-[1.05fr_0.95fr] md:items-center md:py-20">
           <div>
-            <p className="label-cond border-b-2 border-ink pb-3 text-xs sm:text-sm">
+            <p className="label-cond text-[0.65rem] text-muted-foreground sm:text-xs">
+              Devs iniciantes • Devs sem demanda • Freelancers
+            </p>
+            <p className="label-cond mt-3 border-b-2 border-ink pb-3 text-xs sm:text-sm">
               Cartilha prática para desenvolvedores e freelancers
             </p>
             <h1 className="mt-6 leading-[0.82]">
@@ -145,13 +190,13 @@ function Index() {
                 DEV
               </span>
               <span className="mt-2 block font-cond text-[clamp(1.9rem,7vw,3.6rem)] font-bold uppercase leading-[1.05]">
-                <span className="mark-hl">Não trabalhe</span>
+                <span className="mark-hl">Construa uma</span>
                 <br />
-                <span className="mark-hl">no limite</span>
+                <span className="mark-hl">carreira sustentável</span>
               </span>
             </h1>
             <p className="label-cond mt-6 text-base sm:text-lg">
-              Proteja sua mente, seu tempo e sua carreira sem abandonar a tecnologia.
+              Não trabalhe no limite: organize clientes, escopo, prazos e decisões.
             </p>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
               Uma cartilha prática para desenvolvedores que precisam lidar melhor com
