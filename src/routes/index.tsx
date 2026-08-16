@@ -1,8 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import capa from "@/assets/capa.png.asset.json";
+import devKit from "@/assets/dev-kit.png.asset.json";
+import autora from "@/assets/autora.jpg.asset.json";
 
 // Configure aqui a URL do checkout do produto.
 const CHECKOUT_URL = "#checkout";
+// Configure aqui a URL do checkout apenas do DEV Kit.
+const KIT_ONLY_URL = "#checkout";
+// Configure aqui a URL do manual "Como contratar o DEV".
+const MANUAL_URL = "#checkout";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -17,7 +23,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Proteja sua mente, seu tempo e sua carreira sem abandonar a tecnologia. Cartilha + DEV Kit por R$ 47,00.",
+          "Construa uma carreira sustentável na tecnologia. Cartilha + DEV Kit por R$ 47,00.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -52,39 +58,82 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
-const topics = [
-  ["01", "Clientes e Mercado", "Como identificar maturidade do cliente e entender quando procurar oportunidades além do mercado local."],
-  ["02", "Antes de Aceitar", "Como avaliar se um serviço realmente compensa tempo, dinheiro, conhecimento e energia."],
-  ["03", "Escopo e Limites", "Como diferenciar o que foi combinado de uma nova demanda."],
-  ["04", "Prazos e Pressão", "Como lidar com urgências, cobranças e mudanças de prioridade."],
-  ["05", "IA e Profissionalismo", "Como usar IA sem abandonar critério técnico, segurança, testes e responsabilidade."],
-  ["06", "Valor do Dev", "Por que o valor profissional não está simplesmente em escrever código."],
-  ["07", "Carreira", "Freelancer, emprego, consultoria, produto, SaaS e mudança de direção."],
-  ["08", "Sobrecarga", "Como reconhecer sinais de que o trabalho está ocupando espaço demais."],
-];
-
-const parts = [
-  ["Parte 1", "Antes de aceitar o trabalho", "Maturidade do cliente • O serviço compensa? • O que está realmente combinado"],
-  ["Parte 2", "Quando o trabalho começa a pesar", "“É só uma alteração” • Urgências • Retrabalho • Mensagens fora de hora"],
-  ["Parte 3", "IA, profissão e valor", "IA sem perder critério • Testes e segurança • O que sustenta seu valor"],
-  ["Parte 4", "Seu rumo", "Freelance, emprego, consultoria, produto • Mudança de direção"],
-  ["Parte 5", "Não chegue ao limite", "Sinais de sobrecarga • Limites claros • Rotina sustentável"],
+const contentParts = [
+  {
+    part: "Parte 1",
+    title: "Antes de aceitar o trabalho",
+    topics: [
+      "Maturidade do cliente",
+      "Mercado além da sua cidade",
+      "O serviço realmente compensa?",
+      "Tempo, dinheiro, conhecimento e energia",
+      "O que está realmente combinado",
+      "Como apresentar sua proposta",
+    ],
+  },
+  {
+    part: "Parte 2",
+    title: "Quando o trabalho começa a pesar",
+    topics: [
+      "“É só uma alteração”",
+      "Urgências e prazos",
+      "Retrabalho",
+      "Mensagens fora de hora",
+      "Mudança de prioridade",
+      "Canal oficial de comunicação",
+    ],
+  },
+  {
+    part: "Parte 3",
+    title: "IA, profissão e valor",
+    topics: [
+      "IA sem perder critério técnico",
+      "Testes e segurança",
+      "Arquitetura e responsabilidade",
+      "O que sustenta o seu valor",
+      "Precificação do seu trabalho",
+      "Aprendizado contínuo sem ansiedade",
+    ],
+  },
+  {
+    part: "Parte 4",
+    title: "Seu rumo",
+    topics: [
+      "Freelance",
+      "Emprego",
+      "Consultoria",
+      "Produto e SaaS",
+      "Portfólio e captação de clientes",
+      "Mudança de direção",
+    ],
+  },
+  {
+    part: "Parte 5",
+    title: "Não chegue ao limite",
+    topics: [
+      "Sinais de sobrecarga",
+      "Limites claros",
+      "Rotina sustentável",
+      "Organização do dia",
+      "Descanso e foco",
+      "Carreira de longo prazo",
+    ],
+  },
 ];
 
 const complaints = [
-  "“É só uma alteração.”",
-  "“Preciso para amanhã.”",
-  "Cliente mudando tudo no meio do projeto.",
-  "Marketing cobrando prazo.",
-  "Comercial cobrando meta.",
-  "Retrabalho.",
-  "Escopo mal definido.",
-  "Mensagens fora do horário.",
-  "Cobranças constantes.",
-  "Projetos que não compensam.",
-  "Pressão para entregar mais rápido.",
-  "Tentar acompanhar todas as novas ferramentas.",
-  "Medo de a IA substituir seu trabalho.",
+  "Ainda não sabe como precificar um projeto.",
+  "Quer captar clientes e não sabe por onde começar.",
+  "Recebe pedidos soltos no WhatsApp, sem escopo.",
+  "Não tem um briefing para entender a demanda.",
+  "Nunca montou uma proposta comercial.",
+  "Trabalha sem contrato e sem registro do combinado.",
+  "Aceita alterações infinitas por insegurança.",
+  "Fica sem demanda em alguns meses do ano.",
+  "Tem dificuldade de organizar prazos e entregas.",
+  "Não sabe separar suporte de novo serviço.",
+  "Quer atender fora da sua cidade e não sabe como.",
+  "Quer usar IA mantendo critério técnico.",
 ];
 
 const circuit = [
@@ -126,7 +175,6 @@ const faq = [
   ["É um curso?", "Não. É uma cartilha digital acompanhada de materiais práticos."],
   ["O que é o DEV Kit?", "É um conjunto de modelos, estruturas e recursos para ajudar o desenvolvedor a organizar clientes, propostas, projetos e comunicação."],
   ["Preciso ser experiente?", "Não. Pode ser útil tanto para profissionais experientes quanto para quem está começando a atender clientes."],
-  ["A IA vai substituir o DEV?", "A cartilha aborda justamente essa questão e mostra a importância do conhecimento técnico, análise, testes, segurança, arquitetura e responsabilidade profissional."],
   ["É tratamento para burnout?", "Não. O material não substitui acompanhamento médico ou psicológico."],
 ];
 
@@ -137,7 +185,10 @@ function Index() {
       <section className="paper-grain border-b-4 border-ink">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-12 md:grid-cols-[1.05fr_0.95fr] md:items-center md:py-20">
           <div>
-            <p className="label-cond border-b-2 border-ink pb-3 text-xs sm:text-sm">
+            <p className="label-cond text-[0.65rem] text-muted-foreground sm:text-xs">
+              Devs iniciantes • Devs sem demanda • Freelancers
+            </p>
+            <p className="label-cond mt-3 border-b-2 border-ink pb-3 text-xs sm:text-sm">
               Cartilha prática para desenvolvedores e freelancers
             </p>
             <h1 className="mt-6 leading-[0.82]">
@@ -145,13 +196,13 @@ function Index() {
                 DEV
               </span>
               <span className="mt-2 block font-cond text-[clamp(1.9rem,7vw,3.6rem)] font-bold uppercase leading-[1.05]">
-                <span className="mark-hl">Não trabalhe</span>
+                <span className="mark-hl">Construa uma</span>
                 <br />
-                <span className="mark-hl">no limite</span>
+                <span className="mark-hl">carreira sustentável</span>
               </span>
             </h1>
             <p className="label-cond mt-6 text-base sm:text-lg">
-              Proteja sua mente, seu tempo e sua carreira sem abandonar a tecnologia.
+              Não trabalhe no limite: organize clientes, escopo, prazos e decisões.
             </p>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
               Uma cartilha prática para desenvolvedores que precisam lidar melhor com
@@ -194,10 +245,11 @@ function Index() {
       <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
         <SectionLabel>Identificação</SectionLabel>
         <h2 className="max-w-3xl text-3xl leading-tight sm:text-5xl">
-          Você não está cansado apenas de programar.
+          Você sabe programar. Falta estruturar o profissional.
         </h2>
         <p className="mt-6 max-w-2xl text-sm text-muted-foreground sm:text-base">
-          Muitas vezes o desgaste não vem somente do código. Ele vem de:
+          Para devs iniciantes, devs sem demanda e freelancers, o desafio raramente é o
+          código. Costuma ser:
         </p>
         <ul className="mt-8 grid gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
           {complaints.map((c) => (
@@ -211,9 +263,9 @@ function Index() {
           ))}
         </ul>
         <p className="mt-12 max-w-3xl font-cond text-xl font-bold uppercase leading-snug sm:text-3xl">
-          <span className="mark-hl">O problema nem sempre é trabalhar muito.</span>
+          <span className="mark-hl">Postura profissional se aprende.</span>
           <br />
-          <span className="mark-hl">Às vezes é trabalhar sem limites claros.</span>
+          <span className="mark-hl">E muda o resultado do seu trabalho.</span>
         </p>
       </section>
 
@@ -278,8 +330,11 @@ function Index() {
           <Cta className="mt-8 w-full sm:w-auto">Quero a cartilha — R$ 47</Cta>
         </div>
         <img
-          src={capa.url}
-          alt="Mockup da cartilha DEV — Não Trabalhe no Limite"
+          src={devKit.url}
+          alt="Materiais do DEV Kit: briefing, proposta comercial e contrato de serviço"
+          loading="lazy"
+          width={1280}
+          height={1280}
           className="mx-auto w-full max-w-sm -rotate-2 border-4 border-ink shadow-[16px_16px_0_var(--highlight)]"
         />
       </section>
@@ -289,38 +344,34 @@ function Index() {
         <div className="mx-auto max-w-6xl px-5">
           <SectionLabel>Conteúdo</SectionLabel>
           <h2 className="text-3xl leading-tight sm:text-5xl">O que você vai encontrar</h2>
-          <div className="mt-10 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
-            {topics.map(([n, title, desc]) => (
-              <article key={n} className="bg-paper p-6">
-                <span className="font-display text-4xl text-highlight">{n}</span>
-                <h3 className="label-cond mt-3 text-base leading-tight">{title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{desc}</p>
-              </article>
+          <p className="mt-6 max-w-2xl font-cond text-lg font-bold uppercase sm:text-2xl">
+            <span className="mark-hl">30 tópicos práticos</span> organizados em 5 partes
+          </p>
+          <div className="mt-10 space-y-px bg-border">
+            {contentParts.map((p, pi) => (
+              <div
+                key={p.part}
+                className="grid gap-4 bg-paper p-6 sm:grid-cols-[9rem_1fr] sm:items-start"
+              >
+                <div>
+                  <span className="label-cond text-xs text-muted-foreground">{p.part}</span>
+                  <h3 className="label-cond mt-1 text-lg leading-tight sm:text-xl">
+                    {p.title}
+                  </h3>
+                </div>
+                <ol className="grid gap-x-8 gap-y-2 sm:grid-cols-2">
+                  {p.topics.map((t, ti) => (
+                    <li key={t} className="flex gap-3 border-b border-border pb-2 text-sm">
+                      <span className="label-cond text-highlight">
+                        {String(pi * 6 + ti + 1).padStart(2, "0")}
+                      </span>
+                      {t}
+                    </li>
+                  ))}
+                </ol>
+              </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* 30 TÓPICOS */}
-      <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-        <SectionLabel>Estrutura</SectionLabel>
-        <h2 className="text-3xl leading-tight sm:text-5xl">
-          <span className="mark-hl font-cond font-bold uppercase">30 tópicos práticos</span>{" "}
-          organizados em 5 partes
-        </h2>
-        <div className="mt-10 space-y-px bg-border">
-          {parts.map(([part, title, ex]) => (
-            <div
-              key={part}
-              className="grid gap-2 bg-paper p-6 sm:grid-cols-[9rem_1fr] sm:items-baseline"
-            >
-              <span className="label-cond text-xs text-muted-foreground">{part}</span>
-              <div>
-                <h3 className="label-cond text-lg leading-tight sm:text-xl">{title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{ex}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 
@@ -372,6 +423,14 @@ function Index() {
             Além da cartilha, você recebe um kit de materiais pensado para o dia a dia do
             desenvolvedor. O DEV Kit é um conjunto de materiais, modelos e recursos.
           </p>
+          <img
+            src={devKit.url}
+            alt="DEV Kit: briefing online, proposta comercial, contrato de serviço, Google Sheets, Apps Script e Sites"
+            loading="lazy"
+            width={1280}
+            height={1280}
+            className="mt-10 w-full border-4 border-highlight bg-paper"
+          />
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
             {kit.map(([icon, name]) => (
               <div key={name} className="border border-highlight/60 p-5">
@@ -394,7 +453,67 @@ function Index() {
               </li>
             ))}
           </ul>
-          <Cta className="mt-10 w-full sm:w-auto">Quero meu kit agora</Cta>
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <Cta className="w-full sm:w-auto">Quero meu kit agora</Cta>
+            <a
+              href={KIT_ONLY_URL}
+              className="label-cond inline-flex w-full items-center justify-center border-2 border-highlight px-8 py-4 text-center text-sm text-highlight transition-colors hover:bg-highlight hover:text-ink sm:w-auto sm:text-base"
+            >
+              Quero somente o DEV Kit
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* POSICIONAMENTO */}
+      <section className="border-y-4 border-ink bg-paper py-16 md:py-24">
+        <div className="mx-auto max-w-4xl px-5">
+          <div className="border-4 border-ink bg-card p-8 shadow-[12px_12px_0_var(--highlight)]">
+            <p className="label-cond text-xs text-muted-foreground">Posicionamento</p>
+            <h2 className="mt-4 font-cond text-2xl font-bold uppercase leading-tight sm:text-4xl">
+              Esta não é uma cartilha contra clientes.
+            </h2>
+            <p className="mt-6 text-sm text-muted-foreground sm:text-base">
+              O objetivo é apoiar o desenvolvedor na postura profissional e na captação de
+              clientes: entender a demanda, apresentar propostas com clareza, formalizar o
+              combinado e conduzir o projeto com organização. Cliente bem atendido volta e
+              indica — e isso começa com processo, não com desgaste.
+            </p>
+            <div className="mt-8">
+              <a
+                href={MANUAL_URL}
+                className="label-cond inline-flex w-full items-center justify-center bg-ink px-8 py-4 text-center text-sm text-paper ring-2 ring-ink transition-transform hover:-translate-y-0.5 sm:w-auto sm:text-base"
+              >
+                Confira — Manual: Como contratar o DEV
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AUTORA */}
+      <section className="mx-auto max-w-5xl px-5 py-16 md:py-24">
+        <SectionLabel>A autora</SectionLabel>
+        <div className="grid gap-8 sm:grid-cols-[14rem_1fr] sm:items-center">
+          <img
+            src={autora.url}
+            alt="Foto da autora da cartilha DEV — Não Trabalhe no Limite"
+            loading="lazy"
+            className="mx-auto h-48 w-48 rounded-full border-4 border-ink object-cover shadow-[10px_10px_0_var(--highlight)] sm:h-56 sm:w-56"
+          />
+          <div>
+            <h2 className="text-3xl leading-tight sm:text-4xl">[Nome da autora]</h2>
+            <p className="label-cond mt-2 text-xs text-muted-foreground sm:text-sm">
+              Desenvolvedora • CTO • Fundadora de startups
+            </p>
+            <p className="mt-6 text-sm text-muted-foreground sm:text-base">
+              Desenvolvedora apaixonada por tecnologia, atua há anos entre projetos
+              próprios e atendimento a clientes. Já fundou e liderou tecnicamente
+              startups, viveu de perto a rotina de escopo aberto, prazos apertados e
+              decisões sob pressão — e reuniu nesta cartilha o que funciona para trabalhar
+              com mais clareza e construir uma carreira sustentável.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -579,7 +698,7 @@ function Index() {
 
       <footer className="bg-ink py-8 text-center text-paper">
         <p className="label-cond px-5 text-xs sm:text-sm">
-          Trabalhe com inteligência. Proteja sua mente. Construa uma carreira sustentável.
+          Trabalhe com inteligência. Construa uma carreira sustentável.
         </p>
       </footer>
 
