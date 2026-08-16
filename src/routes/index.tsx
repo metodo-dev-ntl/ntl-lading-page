@@ -424,7 +424,7 @@ function Index() {
             src={autoraImage}
             alt="Foto da autora da cartilha DEV — Não Trabalhe no Limite"
             loading="lazy"
-            className="mx-auto h-48 w-48 rounded-full object-cover sm:h-56 sm:w-56"
+            className="mx-auto h-48 w-48 rounded-full border-4 border-ink object-cover sm:h-56 sm:w-56"
           />
           <div>
             <h2 className="text-3xl leading-tight sm:text-4xl">Lidyh Pinheiro</h2>
