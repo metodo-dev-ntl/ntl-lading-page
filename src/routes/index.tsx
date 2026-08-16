@@ -160,7 +160,6 @@ const materials = [
 const faq = [
   ["A cartilha é sobre programação?", "Não. É sobre clientes, escopo, pressão, carreira e organização profissional."],
   ["É um curso?", "Não. É uma cartilha digital acompanhada de materiais práticos."],
-  ["O que é o DEV Kit?", "É um conjunto de modelos, estruturas e recursos para ajudar o desenvolvedor a organizar clientes, propostas, projetos e comunicação."],
   ["Preciso ser experiente?", "Não. Pode ser útil tanto para profissionais experientes quanto para quem está começando a atender clientes."],
   ["É tratamento para burnout?", "Não. O material não substitui acompanhamento médico ou psicológico."],
 ];
@@ -168,18 +167,21 @@ const faq = [
 const testimonials = [
   {
     title: "DEV FREELANCER",
+    initials: "DF",
     quote: "Eu estava tentando ser duas pessoas.",
     text: "Eu precisava desenvolver, conversar com cliente, entender o negócio, organizar prazo e ainda administrar tudo. O que mais me desgastava era sentir que, além de desenvolvedor, eu precisava ser o gestor do negócio inteiro.",
   },
   {
     title: "DEV EM INÍCIO DE CARREIRA",
+    initials: "DC",
     quote: "Achei que o problema era comigo.",
     text: "No começo da carreira eu achava que aquela pressão, a insegurança e a falta de motivação eram simplesmente parte de ser dev. Encontrar uma abordagem que falasse também da postura profissional me fez perceber que eu precisava organizar a forma como trabalhava.",
   },
   {
     title: "CLIENTE DE TECNOLOGIA",
+    initials: "CT",
     quote: "Finalmente consegui entender o outro lado.",
-    text: "Quando o DEV explica o que está sendo feito, o que foi combinado e por que determinada mudança exige trabalho, fica muito mais fácil acompanhar o projeto. Isso evita desentendimentos e ajuda o cliente a saber exatamente pelo que está pagando.",
+    text: "Quando o DEV explica o que está sendo feito, o que foi combinado e por why determinada mudança exige trabalho, fica muito mais fácil acompanhar o projeto. Isso evita desentendimentos e ajuda o cliente a saber exatamente pelo que está pagando.",
   },
 ];
 
@@ -578,9 +580,16 @@ function Index() {
               className="flex flex-col gap-4 border-2 border-ink bg-card p-6 transition-all duration-200 hover:shadow-[8px_8px_0_var(--ink)] slide-up-fade-in"
               style={{ animationDelay: `${idx * 100}ms` }}
             >
-              <div>
-                <p className="label-cond text-xs text-muted-foreground">{testimonial.title}</p>
-                <p className="mt-2 text-lg font-bold leading-snug">{testimonial.quote}</p>
+              <div className="flex items-start gap-4">
+                <div className="h-12 w-12 shrink-0 rounded-full border-2 border-ink bg-highlight flex items-center justify-center">
+                  <span className="label-cond text-xs font-bold text-ink">
+                    {testimonial.initials}
+                  </span>
+                </div>
+                <div className="flex-1">
+                  <p className="label-cond text-xs text-muted-foreground">{testimonial.title}</p>
+                  <p className="mt-2 text-lg font-bold leading-snug">{testimonial.quote}</p>
+                </div>
               </div>
               <p className="text-sm leading-relaxed text-muted-foreground">
                 {testimonial.text}
