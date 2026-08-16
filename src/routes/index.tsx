@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import capa from "@/assets/capa.png.asset.json";
+import capaImage from "@/assets/images/capa.png";
 import devKit from "@/assets/dev-kit.png.asset.json";
 import autora from "@/assets/autora.jpg.asset.json";
 
@@ -221,7 +221,7 @@ function Index() {
 
           <div className="relative">
             <img
-              src={capa.url}
+              src={capaImage}
               alt="Capa da cartilha DEV — Não Trabalhe no Limite"
               className="mx-auto w-full max-w-md border-4 border-ink shadow-[16px_16px_0_var(--ink)]"
             />
