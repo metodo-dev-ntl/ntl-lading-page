@@ -155,3 +155,38 @@
     color: var(--color-foreground);
   }
 }
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-display);
+  }
+}
+
+@utility label-cond {
+  font-family: var(--font-cond);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+@utility mark-hl {
+  background-color: var(--highlight);
+  box-shadow: 0.35rem 0 0 var(--highlight), -0.35rem 0 0 var(--highlight);
+}
+
+@utility paper-grain {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: radial-gradient(var(--ink) 0.5px, transparent 0.5px);
+    background-size: 4px 4px;
+  }
+}
