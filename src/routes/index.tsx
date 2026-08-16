@@ -192,10 +192,7 @@ function Index() {
               Cartilha prática para desenvolvedores e freelancers
             </p>
             <h1 className="mt-6 leading-[0.82]">
-              <span className="block text-[clamp(4.5rem,17vw,11rem)] font-normal tracking-tight">
-                DEV
-              </span>
-              <span className="mt-2 block font-cond text-[clamp(1.9rem,7vw,3.6rem)] font-bold uppercase leading-[1.05]">
+              <span className="mt-2 block font-cond text-[clamp(1.9rem,7vw,3.6rem)] font-bold uppercase leading-[1.2]">
                 <span className="mark-hl">Construa uma</span>
                 <br />
                 <span className="mark-hl">carreira sustentável</span>
