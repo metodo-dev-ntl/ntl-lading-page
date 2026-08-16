@@ -1,8 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import capa from "@/assets/capa.png.asset.json";
+import devKit from "@/assets/dev-kit.png.asset.json";
+import autora from "@/assets/autora.jpg.asset.json";
 
 // Configure aqui a URL do checkout do produto.
 const CHECKOUT_URL = "#checkout";
+// Configure aqui a URL do checkout apenas do DEV Kit.
+const KIT_ONLY_URL = "#checkout";
+// Configure aqui a URL do manual "Como contratar o DEV".
+const MANUAL_URL = "#checkout";
 
 export const Route = createFileRoute("/")({
   head: () => ({
