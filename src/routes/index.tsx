@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Cartilha prática para desenvolvedores e freelancers: clientes, escopo, prazos, IA, carreira e limites. Com o bônus DEV Kit por R$ 47,00.",
+          "Cartilha prática para desenvolvedores e freelancers: clientes, escopo, prazos, carreira e limites. Com o bônus DEV Kit por R$ 47,00.",
       },
       { property: "og:title", content: "DEV — Não Trabalhe no Limite" },
       {
@@ -40,7 +40,7 @@ function Cta({
   return (
     <a
       href={CHECKOUT_URL}
-      className={`inline-flex items-center justify-center label-cond bg-highlight px-8 py-4 text-center text-base text-ink ring-2 ring-ink transition-transform hover:-translate-y-0.5 sm:text-lg ${className}`}
+      className={`inline-flex items-center justify-center label-cond bg-highlight px-8 py-4 text-center text-base text-ink ring-2 ring-ink transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[8px_8px_0_var(--ink)] sm:text-lg ${className}`}
     >
       {children}
     </a>
@@ -83,14 +83,14 @@ const contentParts = [
   },
   {
     part: "Parte 3",
-    title: "IA, profissão e valor",
+    title: "Profissão e valor",
     topics: [
-      "IA sem perder critério técnico",
       "Testes e segurança",
       "Arquitetura e responsabilidade",
-      "O que sustenta o seu valor",
+      "O que sustenta seu valor",
       "Precificação do seu trabalho",
-      "Aprendizado contínuo sem ansiedade",
+      "Conhecimento e evolução profissional",
+      "Quando sua competência está sendo subestimada",
     ],
   },
   {
@@ -131,7 +131,7 @@ const complaints = [
   "Tem dificuldade de organizar prazos e entregas.",
   "Não sabe separar suporte de novo serviço.",
   "Quer atender fora da sua cidade e não sabe como.",
-  "Quer usar IA mantendo critério técnico.",
+  "Trabalha sem uma estrutura clara de atendimento.",
 ];
 
 const circuit = [
@@ -158,11 +158,29 @@ const materials = [
 ];
 
 const faq = [
-  ["A cartilha é sobre programação?", "Não. É sobre clientes, escopo, pressão, IA, carreira e organização profissional."],
+  ["A cartilha é sobre programação?", "Não. É sobre clientes, escopo, pressão, carreira e organização profissional."],
   ["É um curso?", "Não. É uma cartilha digital acompanhada de materiais práticos."],
   ["O que é o DEV Kit?", "É um conjunto de modelos, estruturas e recursos para ajudar o desenvolvedor a organizar clientes, propostas, projetos e comunicação."],
   ["Preciso ser experiente?", "Não. Pode ser útil tanto para profissionais experientes quanto para quem está começando a atender clientes."],
   ["É tratamento para burnout?", "Não. O material não substitui acompanhamento médico ou psicológico."],
+];
+
+const testimonials = [
+  {
+    title: "DEV FREELANCER",
+    quote: "Eu estava tentando ser duas pessoas.",
+    text: "Eu precisava desenvolver, conversar com cliente, entender o negócio, organizar prazo e ainda administrar tudo. O que mais me desgastava era sentir que, além de desenvolvedor, eu precisava ser o gestor do negócio inteiro.",
+  },
+  {
+    title: "DEV EM INÍCIO DE CARREIRA",
+    quote: "Achei que o problema era comigo.",
+    text: "No começo da carreira eu achava que aquela pressão, a insegurança e a falta de motivação eram simplesmente parte de ser dev. Encontrar uma abordagem que falasse também da postura profissional me fez perceber que eu precisava organizar a forma como trabalhava.",
+  },
+  {
+    title: "CLIENTE DE TECNOLOGIA",
+    quote: "Finalmente consegui entender o outro lado.",
+    text: "Quando o DEV explica o que está sendo feito, o que foi combinado e por que determinada mudança exige trabalho, fica muito mais fácil acompanhar o projeto. Isso evita desentendimentos e ajuda o cliente a saber exatamente pelo que está pagando.",
+  },
 ];
 
 function Index() {
@@ -190,7 +208,7 @@ function Index() {
             </p>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
               Uma cartilha prática para desenvolvedores que precisam lidar melhor com
-              clientes, pressão, prazos, mudanças de escopo, IA, dinheiro, carreira e os
+              clientes, pressão, prazos, mudanças de escopo, dinheiro, carreira e os
               limites de uma profissão que exige cada vez mais.
             </p>
 
@@ -199,7 +217,7 @@ function Index() {
                 <p className="label-cond text-xs text-muted-foreground">Acesso digital</p>
                 <p className="font-display text-5xl leading-none sm:text-6xl">R$ 47,00</p>
               </div>
-              <Cta className="w-full sm:w-auto">Quero a cartilha</Cta>
+              <Cta className="w-full sm:w-auto">Quero começar agora →</Cta>
             </div>
             <p className="label-cond mt-4 text-xs text-muted-foreground">
               Acesso digital • Compra segura • Material prático
@@ -432,11 +450,7 @@ function Index() {
               Desenvolvedora • CTO • Fundadora de startups
             </p>
             <p className="mt-6 text-sm text-muted-foreground sm:text-base">
-              Desenvolvedora apaixonada por tecnologia, atua há anos entre projetos
-              próprios e atendimento a clientes. Já fundou e liderou tecnicamente
-              startups, viveu de perto a rotina de escopo aberto, prazos apertados e
-              decisões sob pressão — e reuniu nesta cartilha o que funciona para trabalhar
-              com mais clareza e construir uma carreira sustentável.
+              Criei este material para apoiar desenvolvedores, principalmente quem está começando a atender clientes, a transformar conhecimento técnico em uma atuação mais profissional, organizada e sustentável.
             </p>
           </div>
         </div>
@@ -549,6 +563,82 @@ function Index() {
             ))}
           </ul>
         </div>
+      </section>
+
+      {/* DEPOIMENTOS */}
+      <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
+        <SectionLabel>Depoimentos</SectionLabel>
+        <h2 className="max-w-3xl text-3xl leading-tight sm:text-5xl">
+          Quem vive isso entende
+        </h2>
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {testimonials.map((testimonial, idx) => (
+            <div
+              key={testimonial.title}
+              className="flex flex-col gap-4 border-2 border-ink bg-card p-6 transition-all duration-200 hover:shadow-[8px_8px_0_var(--ink)] slide-up-fade-in"
+              style={{ animationDelay: `${idx * 100}ms` }}
+            >
+              <div>
+                <p className="label-cond text-xs text-muted-foreground">{testimonial.title}</p>
+                <p className="mt-2 text-lg font-bold leading-snug">{testimonial.quote}</p>
+              </div>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                {testimonial.text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* POSICIONAMENTO DESTAQUE */}
+      <section className="mx-auto max-w-6xl px-5 py-8 md:py-12">
+        <div className="border-l-4 border-highlight bg-card p-6">
+          <p className="text-center font-cond text-xl font-bold uppercase leading-tight sm:text-3xl">
+            <span className="mark-hl">Cliente bem atendido volta e indica.</span>
+            <br />
+            <span className="mark-hl">Mas um bom atendimento também precisa de processo.</span>
+          </p>
+        </div>
+      </section>
+
+      {/* DEV KIT */}
+      <section className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-2 md:items-center md:py-24">
+        <div>
+          <SectionLabel>Ferramentas</SectionLabel>
+          <h2 className="text-3xl leading-tight sm:text-4xl">
+            DEV Kit
+          </h2>
+          <p className="mt-4 text-sm text-muted-foreground sm:text-base">
+            Ferramentas para organizar seu atendimento profissional.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-2">
+            {["Briefing", "Proposta", "Contrato", "Escopo", "Comunicação", "Validação", "Suporte"].map((tool) => (
+              <span
+                key={tool}
+                className="label-cond border border-ink px-3 py-1 text-xs sm:text-sm"
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Cta className="w-full sm:w-auto">Quero a cartilha + DEV Kit</Cta>
+            <a
+              href={CHECKOUT_URL}
+              className="label-cond inline-flex w-full items-center justify-center border-2 border-ink px-8 py-4 text-center text-base text-ink transition-all duration-200 hover:bg-ink hover:text-paper sm:w-auto"
+            >
+              Quero somente o DEV Kit
+            </a>
+          </div>
+        </div>
+        <img
+          src={devKitHotmartImage}
+          alt="DEV Kit: Ferramentas para organizar seu atendimento profissional"
+          loading="lazy"
+          width={1280}
+          height={1280}
+          className="mx-auto w-full max-w-lg border-4 border-ink transition-all duration-200 hover:shadow-[12px_12px_0_var(--highlight)] fade-in"
+        />
       </section>
 
       {/* OFERTA */}
