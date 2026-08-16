@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import capaImage from "@/assets/images/capa.png";
-import devKitImage from "@/assets/images/dev-kit-pt.png";
+import devKitImage from "@/assets/images/capa-hotmart.png";
 import autoraImage from "@/assets/images/autora.png";
 
 // Configure aqui a URL do checkout do produto.
