@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Proteja sua mente, seu tempo e sua carreira sem abandonar a tecnologia. Cartilha + DEV Kit por R$ 47,00.",
+          "Construa uma carreira sustentável na tecnologia. Cartilha + DEV Kit por R$ 47,00.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
