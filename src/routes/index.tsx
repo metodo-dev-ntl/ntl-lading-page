@@ -239,10 +239,11 @@ function Index() {
       <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
         <SectionLabel>Identificação</SectionLabel>
         <h2 className="max-w-3xl text-3xl leading-tight sm:text-5xl">
-          Você não está cansado apenas de programar.
+          Você sabe programar. Falta estruturar o profissional.
         </h2>
         <p className="mt-6 max-w-2xl text-sm text-muted-foreground sm:text-base">
-          Muitas vezes o desgaste não vem somente do código. Ele vem de:
+          Para devs iniciantes, devs sem demanda e freelancers, o desafio raramente é o
+          código. Costuma ser:
         </p>
         <ul className="mt-8 grid gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
           {complaints.map((c) => (
@@ -256,9 +257,9 @@ function Index() {
           ))}
         </ul>
         <p className="mt-12 max-w-3xl font-cond text-xl font-bold uppercase leading-snug sm:text-3xl">
-          <span className="mark-hl">O problema nem sempre é trabalhar muito.</span>
+          <span className="mark-hl">Postura profissional se aprende.</span>
           <br />
-          <span className="mark-hl">Às vezes é trabalhar sem limites claros.</span>
+          <span className="mark-hl">E muda o resultado do seu trabalho.</span>
         </p>
       </section>
 
@@ -323,8 +324,11 @@ function Index() {
           <Cta className="mt-8 w-full sm:w-auto">Quero a cartilha — R$ 47</Cta>
         </div>
         <img
-          src={capa.url}
-          alt="Mockup da cartilha DEV — Não Trabalhe no Limite"
+          src={devKit.url}
+          alt="Materiais do DEV Kit: briefing, proposta comercial e contrato de serviço"
+          loading="lazy"
+          width={1280}
+          height={1280}
           className="mx-auto w-full max-w-sm -rotate-2 border-4 border-ink shadow-[16px_16px_0_var(--highlight)]"
         />
       </section>
@@ -334,38 +338,34 @@ function Index() {
         <div className="mx-auto max-w-6xl px-5">
           <SectionLabel>Conteúdo</SectionLabel>
           <h2 className="text-3xl leading-tight sm:text-5xl">O que você vai encontrar</h2>
-          <div className="mt-10 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
-            {topics.map(([n, title, desc]) => (
-              <article key={n} className="bg-paper p-6">
-                <span className="font-display text-4xl text-highlight">{n}</span>
-                <h3 className="label-cond mt-3 text-base leading-tight">{title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{desc}</p>
-              </article>
+          <p className="mt-6 max-w-2xl font-cond text-lg font-bold uppercase sm:text-2xl">
+            <span className="mark-hl">30 tópicos práticos</span> organizados em 5 partes
+          </p>
+          <div className="mt-10 space-y-px bg-border">
+            {contentParts.map((p, pi) => (
+              <div
+                key={p.part}
+                className="grid gap-4 bg-paper p-6 sm:grid-cols-[9rem_1fr] sm:items-start"
+              >
+                <div>
+                  <span className="label-cond text-xs text-muted-foreground">{p.part}</span>
+                  <h3 className="label-cond mt-1 text-lg leading-tight sm:text-xl">
+                    {p.title}
+                  </h3>
+                </div>
+                <ol className="grid gap-x-8 gap-y-2 sm:grid-cols-2">
+                  {p.topics.map((t, ti) => (
+                    <li key={t} className="flex gap-3 border-b border-border pb-2 text-sm">
+                      <span className="label-cond text-highlight">
+                        {String(pi * 6 + ti + 1).padStart(2, "0")}
+                      </span>
+                      {t}
+                    </li>
+                  ))}
+                </ol>
+              </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* 30 TÓPICOS */}
-      <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-        <SectionLabel>Estrutura</SectionLabel>
-        <h2 className="text-3xl leading-tight sm:text-5xl">
-          <span className="mark-hl font-cond font-bold uppercase">30 tópicos práticos</span>{" "}
-          organizados em 5 partes
-        </h2>
-        <div className="mt-10 space-y-px bg-border">
-          {parts.map(([part, title, ex]) => (
-            <div
-              key={part}
-              className="grid gap-2 bg-paper p-6 sm:grid-cols-[9rem_1fr] sm:items-baseline"
-            >
-              <span className="label-cond text-xs text-muted-foreground">{part}</span>
-              <div>
-                <h3 className="label-cond text-lg leading-tight sm:text-xl">{title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{ex}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 
