@@ -11,17 +11,17 @@ const MANUAL_URL = "#checkout";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "DEV — Não Trabalhe no Limite | Cartilha + DEV Kit por R$ 47" },
+      { title: "DEV — Não Trabalhe no Limite | Manual + DEV Kit por R$ 47" },
       {
         name: "description",
         content:
-          "Cartilha prática para desenvolvedores e freelancers: clientes, escopo, prazos, carreira e limites. Com o bônus DEV Kit por R$ 47,00.",
+          "Manual prática para desenvolvedores e freelancers: clientes, escopo, prazos, carreira e limites. Com o bônus DEV Kit por R$ 47,00.",
       },
       { property: "og:title", content: "DEV — Não Trabalhe no Limite" },
       {
         property: "og:description",
         content:
-          "Construa uma carreira sustentável na tecnologia. Cartilha + DEV Kit por R$ 47,00.",
+          "Construa uma carreira sustentável na tecnologia. Manual + DEV Kit por R$ 47,00.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -158,8 +158,8 @@ const materials = [
 ];
 
 const faq = [
-  ["A cartilha é sobre programação?", "Não. É sobre clientes, escopo, pressão, carreira e organização profissional."],
-  ["É um curso?", "Não. É uma cartilha digital acompanhada de materiais práticos."],
+  ["A manual é sobre programação?", "Não. É sobre clientes, escopo, pressão, carreira e organização profissional."],
+  ["É um curso?", "Não. É uma manual digital acompanhada de materiais práticos."],
   ["Preciso ser experiente?", "Não. Pode ser útil tanto para profissionais experientes quanto para quem está começando a atender clientes."],
   ["É tratamento para burnout?", "Não. O material não substitui acompanhamento médico ou psicológico."],
 ];
@@ -196,7 +196,7 @@ function Index() {
               Devs iniciantes • Devs sem demanda • Freelancers
             </p>
             <p className="label-cond mt-3 border-b-2 border-ink pb-3 text-xs sm:text-sm">
-              Cartilha prática para desenvolvedores e freelancers
+              Manual prática para desenvolvedores e freelancers
             </p>
             <h1 className="mt-6 leading-[0.82]">
               <span className="mt-2 block font-cond text-[clamp(1.9rem,7vw,3.6rem)] font-bold uppercase leading-[1.2]">
@@ -209,7 +209,7 @@ function Index() {
               Não trabalhe no limite: organize clientes, escopo, prazos e decisões.
             </p>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Uma cartilha prática para desenvolvedores que precisam lidar melhor com
+              Uma manual prática para desenvolvedores que precisam lidar melhor com
               clientes, pressão, prazos, mudanças de escopo, dinheiro, carreira e os
               limites de uma profissão que exige cada vez mais.
             </p>
@@ -229,7 +229,7 @@ function Index() {
           <div className="relative">
             <img
               src={capaImage}
-              alt="Capa da cartilha DEV — Não Trabalhe no Limite"
+              alt="Capa da manual DEV — Não Trabalhe no Limite"
               className="mx-auto w-full max-w-2xl border-4 border-ink shadow-[16px_16px_0_var(--ink)]"
             />
             <div className="absolute -top-4 -right-1 flex h-28 w-28 rotate-6 items-center justify-center rounded-full bg-highlight ring-2 ring-ink sm:h-36 sm:w-36">
@@ -312,11 +312,11 @@ function Index() {
         <div>
           <SectionLabel>O material</SectionLabel>
           <h2 className="text-3xl leading-tight sm:text-4xl">
-            Uma cartilha para olhar para o seu trabalho antes que ele chegue ao limite.
+            Uma manual para olhar para o seu trabalho antes que ele chegue ao limite.
           </h2>
           <p className="mt-6 text-sm text-muted-foreground sm:text-base">
             <strong className="text-ink">DEV — Não Trabalhe no Limite</strong> é uma
-            cartilha prática para ajudar profissionais de tecnologia a analisar melhor seus
+            manual prática para ajudar profissionais de tecnologia a analisar melhor seus
             projetos, clientes, decisões, limites, carreira e relação com o próprio
             trabalho.
           </p>
@@ -331,7 +331,7 @@ function Index() {
               </li>
             </ul>
           </div>
-          <Cta className="mt-8 w-full sm:w-auto">Quero a cartilha — R$ 47</Cta>
+          <Cta className="mt-8 w-full sm:w-auto">Quero a manual — R$ 47</Cta>
         </div>
         <img
           src={devKitHotmartImage}
@@ -385,7 +385,7 @@ function Index() {
           <SectionLabel>Material prático</SectionLabel>
           <h2 className="text-3xl sm:text-5xl">Não é só leitura.</h2>
           <p className="mt-6 max-w-2xl text-sm text-muted-foreground sm:text-base">
-            A cartilha também apresenta uma estrutura prática para o profissional organizar
+            A manual também apresenta uma estrutura prática para o profissional organizar
             melhor sua relação com clientes e projetos.
           </p>
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
@@ -416,7 +416,7 @@ function Index() {
           <div className="border-4 border-ink bg-card p-8 shadow-[12px_12px_0_var(--highlight)]">
             <p className="label-cond text-xs text-muted-foreground">Posicionamento</p>
             <h2 className="mt-4 font-cond text-2xl font-bold uppercase leading-tight sm:text-4xl">
-              Esta não é uma cartilha contra clientes.
+              Esta não é uma manual contra clientes.
             </h2>
             <p className="mt-6 text-sm text-muted-foreground sm:text-base">
               O objetivo é apoiar o desenvolvedor na postura profissional e na captação de
@@ -442,7 +442,7 @@ function Index() {
         <div className="grid gap-8 sm:grid-cols-[14rem_1fr] sm:items-center">
           <img
             src={autoraImage}
-            alt="Foto do autor da cartilha DEV — Não Trabalhe no Limite"
+            alt="Foto do autor da manual DEV — Não Trabalhe no Limite"
             loading="lazy"
             className="mx-auto h-48 w-48 rounded-full border-4 border-ink object-cover sm:h-56 sm:w-56"
           />
@@ -461,7 +461,7 @@ function Index() {
               Essa experiência deu origem a uma convicção: a maturidade do mercado depende dos dois lados. Quem presta um serviço precisa aprender a apresentar, negociar, delimitar e conduzir seu trabalho. Quem contrata também precisa compreender melhor o que está contratando.
             </p>
             <p className="mt-4 text-sm text-muted-foreground sm:text-base">
-              O objetivo desta cartilha não é ensinar o DEV a trabalhar contra o cliente. É ajudá-lo a construir relações profissionais mais claras, maduras e sustentáveis.
+              O objetivo desta manual não é ensinar o DEV a trabalhar contra o cliente. É ajudá-lo a construir relações profissionais mais claras, maduras e sustentáveis.
             </p>
           </div>
         </div>
@@ -624,17 +624,17 @@ function Index() {
         <div className="mx-auto grid max-w-5xl gap-12 px-5 md:grid-cols-[0.9fr_1.1fr] md:items-center">
           <img
             src={capaImage}
-            alt="Cartilha DEV — Não Trabalhe no Limite"
+            alt="Manual DEV — Não Trabalhe no Limite"
             className="mx-auto w-full max-w-sm border-4 border-highlight"
           />
           <div>
             <p className="label-cond text-xs text-highlight">Oferta</p>
             <h2 className="mt-3 text-3xl leading-tight sm:text-5xl">
-              Leve a cartilha
+              Leve a manual
             </h2>
             <ul className="mt-8 space-y-3 text-sm sm:text-base">
               {[
-                "Cartilha DEV — Não Trabalhe no Limite",
+                "Manual DEV — Não Trabalhe no Limite",
                 "Materiais práticos",
                 "30 tópicos em 5 partes",
               ].map((t) => (
@@ -647,7 +647,7 @@ function Index() {
             <p className="mt-8 font-display text-6xl leading-none text-highlight sm:text-7xl">
               R$ 47,00
             </p>
-            <Cta className="mt-6 w-full sm:w-auto">Quero a cartilha</Cta>
+            <Cta className="mt-6 w-full sm:w-auto">Quero a manual</Cta>
             <p className="label-cond mt-4 text-xs opacity-70">
               Acesso digital • Compra segura • Material prático
             </p>
@@ -683,7 +683,7 @@ function Index() {
           </div>
           <p className="mt-10 font-display text-6xl leading-none sm:text-7xl">R$ 47,00</p>
           <Cta className="mt-8 w-full bg-ink text-paper ring-ink sm:w-auto">
-            Quero a cartilha agora
+            Quero a manual agora
           </Cta>
         </div>
       </section>
