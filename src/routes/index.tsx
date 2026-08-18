@@ -3,10 +3,8 @@ import capaImage from "@/assets/images/capa.png";
 import devKitHotmartImage from "@/assets/images/capa-hotmart.png";
 import autoraImage from "@/assets/images/autor.png";
 
-// Configure aqui a URL do checkout do produto.
-const CHECKOUT_URL = "#checkout";
-// Configure aqui a URL do manual "Como contratar o DEV".
-const MANUAL_URL = "#checkout";
+const CHECKOUT_URL = "https://pay.hotmart.com/I107184088C";
+const MANUAL_URL = "https://pay.hotmart.com/I107184088C";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -426,7 +424,6 @@ function Index() {
             </p>
             <div className="mt-8">
               <a
-                href={MANUAL_URL}
                 className="label-cond inline-flex w-full items-center justify-center bg-ink px-8 py-4 text-center text-sm text-paper ring-2 ring-ink transition-transform hover:-translate-y-0.5 sm:w-auto sm:text-base"
               >
                 Confira — Manual: Como contratar o DEV
