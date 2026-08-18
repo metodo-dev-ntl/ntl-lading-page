@@ -203,12 +203,10 @@ function Index() {
               </span>
             </h1>
             <p className="label-cond mt-6 text-base sm:text-lg">
-              Não trabalhe no limite: organize clientes, escopo, prazos e decisões.
+              PRESSÃO, PRAZOS E MUDANÇAS DE ESCOPO SERÃO SIMPLES E DIDÁTICOS PARA SEU CLIENTE.
             </p>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Uma manual prática para desenvolvedores que precisam lidar melhor com
-              clientes, pressão, prazos, mudanças de escopo, dinheiro, carreira e os
-              limites de uma profissão que exige cada vez mais.
+              Um manual prático para desenvolvedores que precisam lidar melhor com clientes, demandas, dinheiro e decisões, respeitando os limites de uma profissão que exige cada vez mais.
             </p>
 
             <div className="mt-8 flex flex-wrap items-end gap-6">
