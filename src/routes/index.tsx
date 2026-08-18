@@ -435,7 +435,7 @@ function Index() {
 
       {/* AUTOR */}
       <section className="mx-auto max-w-5xl px-5 py-16 md:py-24">
-        <SectionLabel>O autor</SectionLabel>
+            <SectionLabel>Quem aplicou a metodologia</SectionLabel>
         <div className="grid gap-8 sm:grid-cols-[14rem_1fr] sm:items-center">
           <img
             src={autoraImage}
@@ -444,21 +444,27 @@ function Index() {
             className="mx-auto h-48 w-48 rounded-full border-4 border-ink object-cover sm:h-56 sm:w-56"
           />
           <div>
-            <h2 className="text-3xl leading-tight sm:text-4xl">Luidi Pinheiro</h2>
+            <h2 className="text-3xl leading-tight sm:text-4xl">Alllef Macedo</h2>
             <p className="label-cond mt-2 text-xs text-muted-foreground sm:text-sm">
-              Desenvolvedor • Programador autodidata • Freelancer
+              Desenvolvedor • Freelancer • Profissional de tecnologia
             </p>
             <p className="mt-6 text-sm text-muted-foreground sm:text-base">
-              Paraense, 34 anos, é programador autodidata e desenvolvedor freelancer. Atua profissionalmente com tecnologia desde os 17 anos, quando começou trabalhando como webdesigner e na criação de páginas para a web.
+              Alllef Macedo atua com desenvolvimento e trabalho independente em tecnologia e passou pela experiência de perceber que dominar a parte técnica não era suficiente para conduzir bem um projeto.
             </p>
             <p className="mt-4 text-sm text-muted-foreground sm:text-base">
-              Durante sua trajetória, percebeu que dominar o desenvolvimento não era suficiente para sustentar uma carreira saudável. Ao acreditar que precisava apenas aprimorar suas habilidades técnicas e deixar a captação e a relação com clientes nas mãos de outras pessoas, acabou perdendo o controle sobre uma parte fundamental do próprio trabalho.
+              Na prática, aprendeu que problemas com clientes nem sempre surgem pela falta de conhecimento técnico. Muitas vezes começam antes: na comunicação, na definição da necessidade, nas expectativas, nos limites e naquilo que realmente foi combinado.
             </p>
             <p className="mt-4 text-sm text-muted-foreground sm:text-base">
-              Essa experiência deu origem a uma convicção: a maturidade do mercado depende dos dois lados. Quem presta um serviço precisa aprender a apresentar, negociar, delimitar e conduzir seu trabalho. Quem contrata também precisa compreender melhor o que está contratando.
+              Ao aplicar uma metodologia mais organizada para conduzir essas situações, passou a enxergar o trabalho de outra forma: o desenvolvedor não precisa escolher entre ser tecnicamente competente e saber lidar com pessoas. As duas coisas fazem parte do trabalho.
             </p>
             <p className="mt-4 text-sm text-muted-foreground sm:text-base">
-              O objetivo desta manual não é ensinar o DEV a trabalhar contra o cliente. É ajudá-lo a construir relações profissionais mais claras, maduras e sustentáveis.
+              Este manual reúne essa forma de pensar e transformar situações comuns do dia a dia em um processo mais claro, profissional e sustentável.
+            </p>
+            <p className="mt-6 text-sm font-medium text-muted-foreground sm:text-base">
+              Não é um manual para trabalhar contra o cliente.
+            </p>
+            <p className="mt-1 text-sm font-medium text-muted-foreground sm:text-base">
+              É uma ferramenta para o DEV trabalhar melhor com o cliente.
             </p>
           </div>
         </div>
