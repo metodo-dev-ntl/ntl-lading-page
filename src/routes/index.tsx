@@ -111,7 +111,6 @@ const contentParts = [
       "Rotina sustentável",
       "Organização do dia",
       "Descanso e foco",
-      "Carreira de longo prazo",
       "Usando o manual na prática",
     ],
   },
