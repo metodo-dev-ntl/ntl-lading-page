@@ -95,8 +95,8 @@ const contentParts = [
     title: "Conduzindo o serviço",
     topics: [
       "Comportamento e obrigações do freelancer",
-      "Entendendo o cliente",
       "Orientando o cliente",
+      "Quem indica apresenta, quem desenvolve conduz",
       "Etapas de entrega",
       "Reajustando o serviço",
       "Rompimento de contrato",
@@ -112,6 +112,7 @@ const contentParts = [
       "Organização do dia",
       "Descanso e foco",
       "Carreira de longo prazo",
+      "Usando o manual na prática",
     ],
   },
 ];
